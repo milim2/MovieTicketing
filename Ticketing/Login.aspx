@@ -5,13 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style4 {
-            height: 301px;
-            width: 586px;
-        }
-    </style>
-</head>
+    </head>
  <body>
  <form id="form1" runat="server">
          
@@ -22,9 +16,9 @@
          </p>
          <table class="auto-style1" style="margin-left: auto; margin-right: auto;">
              <tr>
-                 <td class="auto-style3">Email</td>
+                 <td class="auto-style3">User Name</td>
                  <td class="auto-style2">
-            <asp:TextBox ID="tbEmail" runat="server" MaxLength="50" Width="280px"></asp:TextBox>
+            <asp:TextBox ID="tbUsername" runat="server" MaxLength="50" Width="280px"></asp:TextBox>
                  </td>
                  <td>
                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbEmail" ErrorMessage="Can't be empty!!"></asp:RequiredFieldValidator>

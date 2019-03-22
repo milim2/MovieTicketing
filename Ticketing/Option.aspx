@@ -20,17 +20,53 @@
         .auto-style5 {
             width: 317px;
         }
+        .auto-style6 {
+            width: 35%;
+            height: 133px;
+        }
+        .auto-style7 {
+            width: 330px;
+            table-layout: auto;
+        }
+        .auto-style8 {
+            width: 330px;
+            height: 57px;
+            table-layout: auto;
+        }
+        .auto-style9 {
+            height: 57px;
+            width: 649px;
+            table-layout: auto;
+        }
+        .auto-style10 {
+            width: 649px;
+            table-layout: auto;
+        }
     </style>
 </head>
 <body>
-    <p>
-        <br />
-    </p>
-    <p>
-        &nbsp;</p>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" style="table-layout: auto; border-collapse: collapse">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: x-large; font-weight: bold; font-style: normal; color: #0080FF; text-align: center;">
+            <br />
+            Welcome to ViewCart<br />
+&nbsp;<table class="auto-style6" style="border: thin solid #000000; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: normal; margin-right: auto; margin-left: auto; color: #000000; text-align: center;">
+                <tr>
+                    <td class="auto-style8" style="padding: 0px; border-collapse: collapse;">Movie </td>
+                    <td class="auto-style9" style="padding: 0px; border-collapse: collapse;">
+                        <asp:Label ID="lb_movie" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style7" style="padding: 0px; border-collapse: collapse;">Date &amp; Time</td>
+                    <td class="auto-style10" style="padding: 0px; border-collapse: collapse;">
+                        <asp:Label ID="lb_date" runat="server" Text="Label"></asp:Label>
+&nbsp;<asp:Label ID="lb_time" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <p>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" Text="Select Tickets"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" Text="Select Options"></asp:Label>
         </p>
         <table class="auto-style1" style="width: auto">
             <tr>
@@ -112,10 +148,13 @@
             <asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" Height="46px"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Submit" Width="175px" />
+            If you have an account,&nbsp; you will get 20% Dicounts : Have <asp:HyperLink ID="link_login" runat="server" NavigateUrl="~/Login.aspx">an Account!!</asp:HyperLink>
+&nbsp;&nbsp;&nbsp; or Create
+            <asp:HyperLink ID="link_register" runat="server" NavigateUrl="~/RegisterForm.aspx">an Account</asp:HyperLink>
         </p>
         <p>
-            &nbsp;</p>
+            <asp:Button ID="Button1" runat="server" Text="Submit" Width="175px" />
+        </p>
         <p>
             &nbsp;</p>
         <div>

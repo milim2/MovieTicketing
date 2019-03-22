@@ -11,7 +11,11 @@ namespace Ticketing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            lb_movie.Text = (string)(Session["Title"]);
+            lb_date.Text = (string)(Session["Date"]);
+            lb_time.Text = (string)(Session["Time"]);
+
             double total = 0;
             int gen = 0, chd = 0, snr = 0, tue = 0;
              

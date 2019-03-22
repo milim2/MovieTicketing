@@ -91,6 +91,7 @@
     <Content Include="AdminManagement.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\alita.png" />
+    <Content Include="images\Calendar.png" />
     <Content Include="images\captainmarvelbrielarson.png" />
     <Content Include="images\captiveState.png" />
     <Content Include="images\cruel.jpg" />
@@ -104,6 +105,7 @@
     <Content Include="images\sm_cruel.jpg" />
     <Content Include="images\sm_cruel.png" />
     <Content Include="images\sm_sm_avangersEndGame.jpg" />
+    <Content Include="Invoice.aspx" />
     <Content Include="Movies.aspx" />
     <Content Include="images\alita.jpg" />
     <Content Include="images\background.jpg" />
@@ -134,6 +136,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Movies.aspx.cs">
       <DependentUpon>Movies.aspx</DependentUpon>

@@ -31,21 +31,48 @@ namespace Ticketing {
         protected global::System.Web.UI.WebControls.DropDownList movie_ddl;
         
         /// <summary>
-        /// date_ddl control.
+        /// tbDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList date_ddl;
+        protected global::System.Web.UI.WebControls.TextBox tbDate;
         
         /// <summary>
-        /// time_ddl control.
+        /// tbTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList time_ddl;
+        protected global::System.Web.UI.WebControls.TextBox tbTime;
+        
+        /// <summary>
+        /// lb_submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lb_submit;
+        
+        /// <summary>
+        /// btn_reset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_reset;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

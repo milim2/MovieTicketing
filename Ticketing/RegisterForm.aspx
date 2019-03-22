@@ -18,10 +18,7 @@
         .auto-style3 {
             width: 248px;
         }
-        .auto-style5 {
-            width: 105px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -90,7 +87,7 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">
             <asp:Button ID="btnSign" runat="server" OnClick="btnSign_Click" Text="Sign Up" />
-                        <input id="Submit1" class="auto-style5" type="submit" value="submit" /></td>
+                        </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
