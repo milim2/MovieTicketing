@@ -5,77 +5,124 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 53%;
+            right: auto;
+            left: auto;
+        }
+        .auto-style2 {
+            width: 242px;
+        }
+        .auto-style3 {
+            width: 216px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">           
         <div>
-         <h2>Admin Management</h2>
+         <h2 style="text-align: center">Admin Management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2>
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <p>
-                &nbsp;</p>
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="UID" runat="server"></asp:TextBox>
-        </p>
-            <p>
-            User Name:&nbsp;&nbsp; <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblMessage" runat="server"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
-        <p>
-            Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tbPassword" runat="server" TextMode="Password"></asp:TextBox>
-        &nbsp;
-            <asp:Button ID="add_btn" runat="server" OnClick="add_btn_Click" Text="Add" />
-            <asp:Button ID="edit_btn" runat="server" OnClick="edit_btn_Click" Text="Update" />
-            <asp:Button ID="del_btn" runat="server" OnClick="Button3_Click" Text="Delete" />
-        </p>
-        <p>
-            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
-        </p>
-         <p>
-            Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox>
-        </p>
-         <p>
-            Phone :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
-        </p>
-        <p>
-            Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="taAge" runat="server"></asp:TextBox>
-        </p>
-            <p>
-            <asp:Button ID="refresh_btn" runat="server" OnClick="refresh_btn_Click" Text="Refresh" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
             <p>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ShoppingMallConnectionString %>" SelectCommand="SELECT * FROM [MemberTable]"></asp:SqlDataSource>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID
+                        <asp:TextBox ID="tbid" runat="server" Width="78px"></asp:TextBox>
+                    &nbsp; =&gt;&nbsp;
+            <asp:Button ID="EditBtn" runat="server" Text="Edit" Width="119px" OnClick="EditBtn_Click"  />
+                    &nbsp;&nbsp;&nbsp; <asp:Button ID="del_btn" runat="server" Text="Delete" Width="105px" OnClick="del_btn_Click" />
+                    &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="refresh_btn" runat="server"  Text="Refresh" OnClick="refresh_btn_Click1" />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="926px" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="UserID" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="Vertical">
-            <AlternatingRowStyle BackColor="#CCCCCC" />
-            <Columns>
-                <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
-                <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-            </Columns>
-            <FooterStyle BackColor="#CCCCCC" />
-            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#808080" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#383838" />
+        <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ShoppingMallConnectionString %>" SelectCommand="SELECT UserID, UserName, Password, Email, Address, PostalCode, Phone FROM MemberTable"></asp:SqlDataSource>
+        <br />
+
+        <div class="row color-table">
+            <asp:Button ID="add_btn" runat="server" Text="Add New" Width="125px" OnClick="add_btn_Click1" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+
+        </div>
+&nbsp;&nbsp;
+        <table class="auto-style1" style="border-collapse: collapse; ">
+                <tr>
+                    <td class="auto-style2">User Name:&nbsp;&nbsp; </td>
+                    <td class="auto-style3"> <asp:TextBox ID="tbUsername" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbUsername" ErrorMessage="Can't be empty!"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+        <p>
+            Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+                    </td>
+                    <td class="auto-style3">
+            <asp:TextBox ID="tbPassword" runat="server" TextMode="Password"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPassword" ErrorMessage="Can't be empty!"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Confirm Password</td>
+                    <td class="auto-style3"> 
+                        <asp:TextBox ID="passConfirm" runat="server" TextMode="Password"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="tbPassword" ControlToValidate="passConfirm" ErrorMessage="CompareValidator"></asp:CompareValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td class="auto-style3"> <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbEmail" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Full Name:&nbsp; </td>
+                    <td class="auto-style3">
+             <asp:TextBox ID="tbFullname" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tbFullname" ErrorMessage="Can't be empty!"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td class="auto-style3">
+            <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Phone :&nbsp;&nbsp; </td>
+                    <td class="auto-style3">
+            <asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Age:&nbsp; </td>
+                    <td class="auto-style3">
+            <asp:TextBox ID="tbAge" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tbAge" ErrorMessage="Input your age"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                </table>
     </form>
 </body>
 </html>

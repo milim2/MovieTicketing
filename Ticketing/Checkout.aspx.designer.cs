@@ -10,7 +10,7 @@
 namespace Ticketing {
     
     
-    public partial class Home {
+    public partial class Invoice {
         
         /// <summary>
         /// form1 control.
@@ -22,93 +22,84 @@ namespace Ticketing {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LinkButton2 control.
+        /// lbAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.WebControls.Label lbAmount;
         
         /// <summary>
-        /// movie_ddl control.
+        /// lbmsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList movie_ddl;
+        protected global::System.Web.UI.WebControls.Label lbmsg;
         
         /// <summary>
-        /// tbDate control.
+        /// ddl_card control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDate;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_card;
         
         /// <summary>
-        /// ddl_time control.
+        /// tbCardNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_time;
+        protected global::System.Web.UI.WebControls.TextBox tbCardNum;
         
         /// <summary>
-        /// lbSubmit control.
+        /// tbMonth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbSubmit;
+        protected global::System.Web.UI.WebControls.TextBox tbMonth;
         
         /// <summary>
-        /// btn_reset control.
+        /// tbYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_reset;
+        protected global::System.Web.UI.WebControls.TextBox tbYear;
         
         /// <summary>
-        /// movieBtn control.
+        /// tbName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton movieBtn;
+        protected global::System.Web.UI.WebControls.TextBox tbName;
         
         /// <summary>
-        /// watch control.
+        /// btnOK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label watch;
+        protected global::System.Web.UI.WebControls.Button btnOK;
         
         /// <summary>
-        /// Label4 control.
+        /// btCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Button btCancel;
     }
 }

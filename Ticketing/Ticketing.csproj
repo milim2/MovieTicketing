@@ -105,8 +105,7 @@
     <Content Include="images\sm_cruel.jpg" />
     <Content Include="images\sm_cruel.png" />
     <Content Include="images\sm_sm_avangersEndGame.jpg" />
-    <Content Include="Invoice.aspx" />
-    <Content Include="Movies.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="images\alita.jpg" />
     <Content Include="images\background.jpg" />
     <Content Include="images\captainmarvelbrielarson.jpg" />
@@ -119,6 +118,7 @@
     <Content Include="images\smallFoot.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Option.aspx" />
+    <Content Include="ReadMe.txt" />
     <Content Include="RegisterForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -130,6 +130,11 @@
     <Compile Include="AdminManagement.aspx.designer.cs">
       <DependentUpon>AdminManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,19 +142,12 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.aspx.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Invoice.aspx.designer.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Movies.aspx.cs">
-      <DependentUpon>Movies.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Movies.aspx.designer.cs">
-      <DependentUpon>Movies.aspx</DependentUpon>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -175,6 +173,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

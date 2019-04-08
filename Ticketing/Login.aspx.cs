@@ -8,63 +8,60 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.Security;
 using System.Data;
-using System.Data.SqlClient;
+
 
 
 namespace Ticketing
 {
     public partial class Login : System.Web.UI.Page
     {
-        string msg;   
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        protected void LoginButton_Click1(object sender, EventArgs e)
         {
-            string uname = tbUsername.Text;
-            string pass = tbPassword.Text;
-
-            string cs = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
-            SqlConnection con = new SqlConnection(cs);
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from MemberTable where UserName = '"+ uname + "' and Password = '"+ pass +"' ", con);
-
-            DataTable dt = new DataTable();
-            
-            if (dt.Rows[0][0].ToString() == "0")
-            {
-                lblMessage.Text = "login failed";
-                lblMessage.ForeColor = System.Drawing.Color.Red;
-            }
-            /*
-            SqlCommand cmd = new SqlCommand(query, con);
            
-            SqlDataReader reader = cmd.ExecuteReader();
+            using (SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=ShoppingMall;Integrated Security=True"))
+            {
+                con.Open();
+                string query = "Select Count(*) from MemberTable where UserName = " +
+                " '" + tbUsername.Text + "' and Password = '" + tbPassword.Text + "' ";
+                SqlCommand cmd = new SqlCommand(query, con);
 
-            if (reader.Read())
-            {
-                string query2 = "update MemberTable set Email='" + tbUsername.Text + "' where UserName=('" + Request.QueryString["tbUsername"] + "')";
-                SqlCommand cmd2 = new SqlCommand(query2, con);
-                cmd2.ExecuteNonQuery();
-                Response.Redirect("Home.aspx");
-            }
-            */
-            else
-            {
-                if (dt.Rows.ToString() == "admin")
-                    Response.Redirect("AdminManagement");
+                cmd.Parameters.AddWithValue("@UserName", tbUsername.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", tbPassword.Text.Trim());
+                int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+                if (count == 1)
+                {
+                    string cmd2 = " Select FullName from MemberTable where UserName ='" + tbUsername.Text + "'";
+
+                    SqlCommand full = new SqlCommand(cmd2, con);
+                    string fullname = full.ExecuteScalar().ToString();
+                    con.Close();
+                    if (tbUsername.Text == "admin" && tbPassword.Text == "admin")
+                    {
+                        Response.Redirect("AdminManagement.aspx");
+                    }
+                    else
+                    {
+                        string text = "Welcome Back, " + tbUsername.Text;
+                        Session["MSG"] = text;
+                        Session["User"] = tbUsername.Text;
+
+                        Response.Redirect("Home.aspx");
+                    }
+                }
                 else
                 {
-                    Session["fullname"] = dt.Rows[0]["FullName"];
-                    Session["msg"] = String.Format("Welcome back!! ");
-
-                }               
+                    lblmsg.Visible = true;
+                    lblmsg.Text = "Wrong password";
+                }
+                
             }
-            dt.Dispose();
-
         }
-        
     }
 }
 

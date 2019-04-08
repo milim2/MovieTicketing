@@ -22,6 +22,15 @@ namespace Ticketing {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lb_user control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_user;
+        
+        /// <summary>
         /// lb_movie control.
         /// </summary>
         /// <remarks>
@@ -238,6 +247,24 @@ namespace Ticketing {
         protected global::System.Web.UI.WebControls.TextBox subTuesday;
         
         /// <summary>
+        /// chkMember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMember;
+        
+        /// <summary>
+        /// tbSub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbSub;
+        
+        /// <summary>
         /// Label10 control.
         /// </summary>
         /// <remarks>
@@ -265,30 +292,21 @@ namespace Ticketing {
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// link_login control.
+        /// checkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_login;
+        protected global::System.Web.UI.WebControls.Button checkout;
         
         /// <summary>
-        /// link_register control.
+        /// resetBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_register;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button resetBtn;
     }
 }

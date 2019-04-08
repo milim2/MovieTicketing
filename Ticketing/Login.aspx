@@ -12,7 +12,7 @@
          <h2 style="text-align: center">Login</h2>
     
          <p style="text-align: center">
-            <asp:Label ID="lblMessage" runat="server" Font-Bold="True" Font-Size="Small"></asp:Label>
+            <asp:Label ID="lblmsg" runat="server" Font-Bold="True" Font-Size="Small"></asp:Label>
          </p>
          <table class="auto-style1" style="margin-left: auto; margin-right: auto;">
              <tr>
@@ -21,7 +21,7 @@
             <asp:TextBox ID="tbUsername" runat="server" MaxLength="50" Width="280px"></asp:TextBox>
                  </td>
                  <td>
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbEmail" ErrorMessage="Can't be empty!!"></asp:RequiredFieldValidator>
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbUsername" ErrorMessage="Can't be empty!!"></asp:RequiredFieldValidator>
                  </td>
              </tr>
              <tr>
@@ -43,7 +43,7 @@
              <tr>
                  <td class="auto-style3">&nbsp;</td>
                  <td class="auto-style2">
-            <asp:Button ID="Sign_btn" runat="server" OnClick="btnSign_Click" Text="Login" Font-Size="Small" Width="126px" />
+            <asp:Button ID="LoginButton" runat="server" Text="Login" Font-Size="Small" Width="126px" OnClick="LoginButton_Click1" />
                  </td>
                  <td>
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegisterForm.aspx">Create an Account</asp:HyperLink>

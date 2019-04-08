@@ -11,7 +11,17 @@ namespace Ticketing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                lbAmount.Visible = true;
+                lbAmount.Text = (string)(Session["TOT"]);
 
+            }
+        }
+
+        protected void btnOK_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Home.aspx");
         }
     }
 }
